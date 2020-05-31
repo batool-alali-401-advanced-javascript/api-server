@@ -1,38 +1,25 @@
 # LAB - Class 06
 
-## Project: Project Name Here
+## Project: API-server
 
-### Author: Student/Group Name
+### Author: Batool Al-Ali
 
 ### Links and Resources
 
-- [submission PR](http://xyz.com)
+- [submission PR](https://github.com/batool-alali-401-advanced-javascript/api-server/pull/1)
+- [API Doc](https://app.swaggerhub.com/apis/batoolalali/API-server/0.1)
 - [ci/cd](http://xyz.com) (GitHub Actions)
 - [back-end server url](http://xyz.com) (when applicable)
 - [front-end application](http://xyz.com) (when applicable)
 
+
 ### Setup
+nothing
 
-#### `.env` requirements (where applicable)
+#### How to initialize/run your application 
 
-i.e.
+- `$ json-server --id=_id --routes ./data/routes.json  --watch ./data/db.json`
 
-- `PORT` - Port Number
-- `MONGODB_URI` - URL to the running mongo instance/db
-
-#### How to initialize/run your application (where applicable)
-
-- e.g. `npm start`
-
-#### How to use your library (where applicable)
-
-#### Tests
-
-- How do you run tests?
-- Any tests of note?
-- Describe any tests that you did not complete, skipped, etc
 
 #### UML
-
-Link to an image of the UML for your application and response to events
-https://app.swaggerhub.com/apis/batoolalali/API-server/0.1
+![UML Diagram](UML.png)
