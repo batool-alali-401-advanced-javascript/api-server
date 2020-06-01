@@ -1,4 +1,4 @@
-# LAB - Class 06
+# LAB - Class 07
 
 ## Project: API-server
 
@@ -6,7 +6,7 @@
 
 ### Links and Resources
 
-- [submission PR](https://github.com/batool-alali-401-advanced-javascript/api-server/pull/1)
+- [submission PR](https://github.com/batool-alali-401-advanced-javascript/api-server/pull/3)
 - [API Doc](https://app.swaggerhub.com/apis/batoolalali/API-server/0.1)
 - [ci/cd](http://xyz.com) (GitHub Actions)
 - [back-end server url](http://xyz.com) (when applicable)
@@ -14,12 +14,21 @@
 
 
 ### Setup
-nothing
+.env => PORT
 
 #### How to initialize/run your application 
+- `$ npm init -y`
+- `$nodemon`
 
-- `$ json-server --id=_id --routes ./data/routes.json  --watch ./data/db.json`
+#### Libraries:
+- 'dotenv'
+- 'express'
+- 'supertest' for testing.
+
+#### tests:
+- `$ npm jest`
+- `$npm run lint`
 
 
 #### UML
-![UML Diagram](UML.png)
+![UML Diagram](UML2.jpg)
