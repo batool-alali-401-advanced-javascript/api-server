@@ -23,10 +23,10 @@
 #### Libraries:
 - 'dotenv'
 - 'express'
-- 'supertest' for testing.
+- 'supertest' for testing the server.
 
 #### tests:
-- `$ npm jest`
+- `$ npm test`
 - `$npm run lint`
 
 
