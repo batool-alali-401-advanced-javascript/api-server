@@ -1,4 +1,4 @@
-# LAB - Class 07
+# LAB - Class 08
 
 ## Project: API-server
 
@@ -6,7 +6,7 @@
 
 ### Links and Resources
 
-- [submission PR](https://github.com/batool-alali-401-advanced-javascript/api-server/pull/3)
+- [submission PR](https://github.com/batool-alali-401-advanced-javascript/api-server/pull/6)
 - [API Doc](https://app.swaggerhub.com/apis/batoolalali/API-server/0.1)
 - [ci/cd](https://github.com/batool-alali-401-advanced-javascript/api-server/runs/728313283) (GitHub Actions)
 - [back-end server url](http://xyz.com) (when applicable)
@@ -14,7 +14,9 @@
 
 
 ### Setup
-.env => PORT
+- .env => 
+    - PORT
+    - MONGODB_URI
 
 #### How to initialize/run your application 
 - `$ npm init -y`
@@ -24,6 +26,10 @@
 - 'dotenv'
 - 'express'
 - 'supertest' for testing the server.
+- 'morgan'
+- 'mongoose'
+
+
 
 #### tests:
 - `$ npm test`
@@ -31,4 +37,4 @@
 
 
 #### UML
-![UML Diagram](UML2.jpg)
+![UML Diagram](UML3.png)
