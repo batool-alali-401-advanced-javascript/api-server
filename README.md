@@ -6,9 +6,9 @@
 
 ### Links and Resources
 
-- [submission PR](https://github.com/batool-alali-401-advanced-javascript/api-server/pull/6)
+- [submission PR](https://github.com/batool-alali-401-advanced-javascript/api-server/pull/8)
 - [API Doc](https://app.swaggerhub.com/apis/batoolalali/API-server/0.1)
-- [ci/cd](https://github.com/batool-alali-401-advanced-javascript/api-server/runs/732024465) (GitHub Actions)
+- [ci/cd](https://github.com/batool-alali-401-advanced-javascript/api-server/runs/735554266) (GitHub Actions)
 - [back-end server url](http://xyz.com) (when applicable)
 - [front-end application](http://xyz.com) (when applicable)
 
