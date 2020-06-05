@@ -7,7 +7,7 @@
     "test": "jest --coverage --verbose",
     "lint": "eslint '**/*.js'",
     "start": "node index.js",
-    "doc":"jsdoc -c jsdoc.config.json"
+    "jsdoc": "jsdoc -c ./docs/config/jsdoc.config.json"
   },
   "repository": {
     "type": "git",

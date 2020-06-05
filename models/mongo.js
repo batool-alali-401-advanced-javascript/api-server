@@ -1,6 +1,11 @@
 'use strict';
 
 /**
+* Model Model
+* @module Model
+*/
+
+/**
 * Model Constructor
 * @param {object} schema
 */
