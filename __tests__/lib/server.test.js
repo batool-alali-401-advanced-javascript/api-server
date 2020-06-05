@@ -77,4 +77,133 @@ describe('Store API', () => {
       });
   });
 
+  it('Can delete  a category', () => {
+    const  obj = {
+      'name': 'hat',
+      'display_name': 'hat',
+      'description': 'heads cloth',
+      '_id': 8,
+    };
+    return mockRequest
+      .post('/api/v1/categories')
+      .send(obj)
+      .then(data => {
+        return mockRequest
+          .delete(`/api/v1/categories/${data.body._id}`)
+          .send(obj)
+          .then(results => {
+            expect(results.status).toBe(200);
+            expect(results.body[0]).toBe();
+          });
+      });
+  });
+
+  it('Can update category', () => {
+    const  obj = {
+      'name': 'Car',
+      'display_name': 'hat',
+      'description': 'heads cloth',
+      '_id': 8,
+    };
+    return mockRequest.post('/api/v1/categories')
+      .send(obj)
+      .then(data => {
+        return mockRequest.put(`/api/v1/categories/${data.body._id}`)
+          .send({
+            'name': 'Hijab',
+            'display_name': 'hat',
+            'description': 'heads cloth',
+          })
+          .then(results => {
+            expect(results.status).toBe(200);
+            expect(results.body.name).toEqual('Hijab');
+          });
+      });
+  });
+    
+  it('Can delete a product', () => {
+    let obj = {
+      'category': 'hats',
+      'name': 'cascade',
+      'display_name': 'cascade',
+      'description': 'colored cascade',
+      '_id': 10,
+    };
+    return mockRequest
+      .post('/api/v1/products')
+      .send(obj)
+      .then(data => {
+        return mockRequest
+          .delete(`/api/v1/products/${data.body._id}`)
+          .send(obj)
+          .then(results => {
+            expect(results.status).toBe(200);
+            expect(results.body[0]).toBe();
+          });
+      });
+  });
+  it('can a update a product', () => {
+    let obj = {
+      'category': 'hats',
+      'name': 'cascade',
+      'display_name': 'cascade',
+      'description': 'colored cascade',
+      '_id': 5,
+    };
+    return mockRequest.post('/api/v1/products')
+      .send(obj)
+      .then(data=>{
+        return mockRequest.put(`/api/v1/products/${data.body._id}`)
+          .send({
+            'category': 'Hijab',
+            'name': 'cascade',
+            'display_name': 'cascade',
+            'description': 'colored cascade',
+            '_id': 5,
+          })
+          .then(results=>{
+            expect(results.status).toBe(200);
+            expect(results.body.category).toEqual('Hijab');
+          });
+      });
+  });
+
+  it('get one product item', () => {
+    let obj = {
+      'category': 'hats',
+      'name': 'cascade',
+      'display_name': 'cascade',
+      'description': 'colored cascade',
+      '_id': 7,
+    };
+    return mockRequest.post('/api/v1/products')
+      .send(obj)
+      .then(data => {
+        return mockRequest.get(`/api/v1/products/${data.body._id}`)
+          .then(data => {
+            expect(data.body[0].name).toEqual(obj.name);
+            expect(data.body.length).toEqual(1);
+          });
+      });
+  });
+
+  it('Can get one category item', () => {
+    const  obj = {
+      'name': 'Car',
+      'display_name': 'hat',
+      'description': 'heads cloth',
+      '_id': 20,
+    };
+    return mockRequest.post('/api/v1/categories')
+      .send(obj)
+      .then(data => {
+        return mockRequest.get(`/api/v1/categories/${data.body._id}`)
+          .then(data => {
+            console.log(data.body);
+            expect(data.body[0].name).toEqual(obj.name);
+            expect(data.body.length).toEqual(1);
+          });
+      });
+  });
+
 });
