@@ -11,6 +11,7 @@ describe('sever', () => {
   });
   it('should respond with 404 on an invalid method', () => {
     return mockRequest.delete('/api/v1/products').then((results) => {
+      // console.log(results);
       expect(results.status).toBe(404);
     });
   });
